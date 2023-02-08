@@ -1,4 +1,5 @@
 // solution passed 
+// Level: easy 
 var singleNumber = function(nums) {
   let obj = {}; 
   for(let i = 0; i < nums.length; i++){
