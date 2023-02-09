@@ -5,6 +5,7 @@
 // Output: 2
 // Explanation: The square root of 4 is 2, so we return 2.
 // solution passed
+// level easy 
 var mySqrt = function (x) {
   // we need to find the square root of that number
   const total = Math.floor(Math.sqrt(x));
