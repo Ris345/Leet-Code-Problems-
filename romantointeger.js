@@ -24,15 +24,21 @@ const romanNumerals = {
 };
 
 
-var romanToInt = function(s) {
- 
 
+// work in progress 
+var romanToInt = function(s) {
+   // loop through the romanNumerals objects with a for in loop 
+    // for regular test cases add the roman numerals
+     // for the other ones subtract em
+    for (let key in romanNumerals) {
+      if (Object.keys(romanNumerals).includes(s)) {
+        // return the matching value
+      }
+  }
 };
 
 
-
-
-
+romanToInt('I')
 
 
 
