@@ -30,11 +30,13 @@ var romanToInt = function(s) {
    // loop through the romanNumerals objects with a for in loop 
     // for regular test cases add the roman numerals
      // for the other ones subtract em
-    for (let key in romanNumerals) {
-      if (Object.keys(romanNumerals).includes(s)) {
-        // return the matching value
-      }
-  }
+     for (let key in romanNumerals){
+      console.log([key])
+     // if the string matches the key input then return the value of that key 
+     if(s.includes(key)){
+        return romanNumerals[key]
+     } 
+   }
 };
 
 
