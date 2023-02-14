@@ -28,7 +28,7 @@ const romanNumerals = {
 
 var romanToInt = function(s) { 
    let arr = [];
- for (let i = 0; i < s.length - 1; i++){
+ for (let i = 0; i < s.length; i++){
      if (romanNumerals[s[i]] < romanNumerals[s[i + 1]] ){
        arr.push(romanNumerals[s[i + 1]] - romanNumerals[s[i]])
           i++;
