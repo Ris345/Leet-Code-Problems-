@@ -24,12 +24,9 @@ const romanNumerals = {
 };
 
 
-
 // work in progress 
- // not getting the desired results 
- 
-var romanToInt = function(s) {
-   debugger; 
+
+var romanToInt = function(s) { 
    let arr = [];
  for (let i = 0; i < s.length - 1; i++){
      if (romanNumerals[s[i]] < romanNumerals[s[i + 1]] ){
@@ -40,9 +37,7 @@ var romanToInt = function(s) {
        arr.push(romanNumerals[s[i]])
      }
  }
-  const check =arr.reduce((x,y) => {
-    return x + y
-  })
+  const check =arr.reduce((x,y) => x + y)
   return check; 
  };
  
