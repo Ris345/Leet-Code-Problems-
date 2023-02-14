@@ -26,21 +26,29 @@ const romanNumerals = {
 
 
 // work in progress 
+ // not getting the desired results 
+ 
 var romanToInt = function(s) {
-   // loop through the romanNumerals objects with a for in loop 
-    // for regular test cases add the roman numerals
-     // for the other ones subtract em
-     for (let key in romanNumerals){
-      console.log([key])
-     // if the string matches the key input then return the value of that key 
-     if(s.includes(key)){
-        return romanNumerals[key]
-     } 
-   }
-};
-
-
-romanToInt('I')
+   debugger; 
+   let arr = [];
+ for (let i = 0; i < s.length - 1; i++){
+     if (romanNumerals[s[i]] < romanNumerals[s[i + 1]] ){
+       arr.push(romanNumerals[s[i + 1]] - romanNumerals[s[i]])
+          i++;
+          continue;
+     } else {
+       arr.push(romanNumerals[s[i]])
+     }
+ }
+  const check =arr.reduce((x,y) => {
+    return x + y
+  })
+  return check; 
+ };
+ 
+ 
+ console.log(romanToInt('II'));
+ 
 
 
 
