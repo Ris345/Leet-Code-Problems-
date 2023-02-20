@@ -24,7 +24,7 @@ const romanNumerals = {
 };
 
 
-// work in progress 
+
 
 var romanToInt = function(s) { 
    let arr = [];
