@@ -10,8 +10,18 @@
 // Input: nums = [1,3,5,6], target = 7
 // Output: 4
 
+// work in progress 
 var searchInsert = function(nums, target) {
      // loop through the nums array 
+    for (let i = 0; i < nums.length; i++){
+        if (target === nums[i]) {
+            return i
+        } else {
+            if (target > nums[i] || target < nums[i]) {
+                
+            }
+        }
+    }
       // if target === nums[i]
        // return index of nums
     // else
@@ -20,3 +30,7 @@ var searchInsert = function(nums, target) {
            // if we know the last number is greater than the target then we can place it in the last index 
              // else other wise we would have to check for every iteration until we find the number that is smaller than the target 
 };
+
+const nums = [1,3,5,6]
+
+console.log(searchInsert(nums, 2)); 
