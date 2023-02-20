@@ -10,26 +10,23 @@
 // Input: nums = [1,3,5,6], target = 7
 // Output: 4
 
-// work in progress
+// solution passed
 var searchInsert = function (nums, target) {
   // loop through the nums array
   for (let i = 0; i < nums.length; i++) {
-    if (target === nums[i]) {
+    if (nums[i] === target) {
       return i;
-    } else {
-      if (target - nums[i] === 1) {
-        if (target > nums[i]) {
-          nums.push(target);
-          return nums.indexOf(target);
-        } else {
-            // push the number with index 
-        }
-      }
+      break;
     }
   }
-    
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== target) {
+      nums.push(target);
+      nums.sort((x, y) => x - y);
+      return nums.indexOf(target);
+    }
+  }
 };
 
 const nums = [1, 3, 5, 6];
-
 console.log(searchInsert(nums, 2));
