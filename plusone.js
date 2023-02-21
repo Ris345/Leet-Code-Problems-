@@ -9,12 +9,29 @@
 // Incrementing by one gives 123 + 1 = 124.
 // Thus, the result should be [1,2,4].
 
-var plusOne = function(digits) {
-  // reversed for loop 
-   // we want to only increment the first number 
-    // then we want to return that result  
-    
 
-};
+// work in progress 
+var plusOne = function(digits) {
+    debugger;
+    // reversed for loop 
+     // we want to only increment the first number 
+      // then we want to return that result  
+      for (let i = digits.length - 1; i >= 0; i--){
+          if(digits.length > 1){
+            const newNum = digits[digits.length - 1] + 1; 
+            // remove that last digit from the digits array 
+             // then push the number into the array 
+            digits.pop()
+            digits.push(newNum); 
+          } else {
+             const newNums = digits[i] + 1
+          }
+      }
+    return digits; 
+  };
+  
+  console.log(plusOne([1,2,3]));
+  
+  
 
 
