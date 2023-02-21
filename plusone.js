@@ -9,7 +9,7 @@
 // Incrementing by one gives 123 + 1 = 124.
 // Thus, the result should be [1,2,4].
 
-// 
+//
 var plusOne = function (digits) {
   debugger;
   // reversed for loop
@@ -21,16 +21,16 @@ var plusOne = function (digits) {
       // remove that last digit from the digits array
       // then push the number into the array
       digits.pop();
-        digits.push(newNum);
-        break;
+      digits.push(newNum);
+      break;
     } else {
       const newNums = digits[i] + 1;
       digits.pop();
       digits.push(newNums);
-        break; 
+      break;
     }
   }
-  return digits;
+  return digits.length > 1 ? digits: digits.toString().split(''); 
 };
 
 console.log(plusOne([9]));
