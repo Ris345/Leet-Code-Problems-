@@ -30,7 +30,7 @@ var plusOne = function (digits) {
       break;
     }
   }
-  return digits.length > 1 ? digits: digits.toString().split(''); 
+ 
 };
 
 console.log(plusOne([9]));
