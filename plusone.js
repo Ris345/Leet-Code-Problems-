@@ -10,27 +10,23 @@
 // Thus, the result should be [1,2,4].
 
 //
-var plusOne = function (digits) {
+var plusOne = function(digits) {
   debugger;
-  // reversed for loop
-  // we want to only increment the first number
-  // then we want to return that result
-  for (let i = digits.length - 1; i >= 0; i--) {
-    if (digits.length > 1) {
-      const newNum = digits[digits.length - 1] + 1;
-      // remove that last digit from the digits array
-      // then push the number into the array
-      digits.pop();
-      digits.push(newNum);
-      break;
-    } else {
-      const newNums = digits[i] + 1;
-      digits.pop();
-      digits.push(newNums);
-      break;
+  // reversed for loop 
+   // we want to only increment the first number 
+    // then we want to return that result  
+    for (let i = digits.length - 1; i >= 0; i--){
+        if(digits[i] < 9){
+          digits += 1
+          return digits; 
+        } else {
+           digits[i] = 0
+        }
     }
-  }
- 
+  digits.unshift(1); 
+  return digits; 
+  
 };
 
 console.log(plusOne([9]));
+
