@@ -4,22 +4,25 @@
 // Output: "fl"
 
 // work in progress
-var longestCommonPrefix = function(strs) {
-   // split the array trim all the extra space 
-     // filter and remove and extra white space 
-    // loop through the modified array
-     // check if each item in the array is equal to the second item like this [i] = [i + 1] 
-    const item = strs.toString().trim().split('');
-    const modifiedArr = item.filter((x) => {
-      return x !== ","; 
-    })
-    for (let i = 0; i < modifiedArr.length; i++){
-        for (let j = 0; j < modifiedArr.length; j++){
-          if(obj[modifiedArr[i]] !== obj[modifiedArr[j]]){
-            obj[modifiedArr[i]] = 1
-          } else {
-             obj[modifiedArr[i]] += 1;
-          }
-        }
+var longestCommonPrefix = function (strs) {
+  if (strs.length === 0) {
+    return ""
+  }
+  if (strs.length === 1) {
+    return strs[0]
+}
+  let prefix = ""
+  
+  for (let i = 0; i < strs[0].length; i++){
+    for (let j = 0; j < strs.length; j++){
+      if (strs[j][i] === strs[0][i]) {
+        continue; 
+      } else {
+        return prefix; 
+      }
     }
+    prefix += strs[0][i]
+  }
+ 
+  return prefix; 
 };
