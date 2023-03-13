@@ -16,7 +16,9 @@ var addBinary = function (a, b) {
        //
 
  // so 1 + 1 = 2 ---> carry over 1 but should be 0 and then move that one to another number which makes it 0 and again an fonally number 1 gets added
-    
+  
+  
+  
     
 };
 
