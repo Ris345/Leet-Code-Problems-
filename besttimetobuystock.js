@@ -9,18 +9,20 @@
 
 
 const prices = [7, 1, 5, 3, 6, 4];
-
 var maxProfit = function (prices) {
   let arr = []; 
-  debugger; 
   // run a for loop iterating over each item in the array 
    //  choose a day to buy and a day to sell the stock 
      // run a for loop 
        for (let i = 0; i < prices.length; i++){
            for (let j = 0; j < prices.length - 1; j++){
               // compare each item in the array 
-             const highNum = prices[i] - prices[j + 1]
-               arr.push(highNum)
+               const highNum = prices[i] - prices[j + 1]
+               if (highNum < 1){
+                return 0;
+              } else {
+               arr.push(highNum) 
+              }   
                // subtract the largest num with 1 
             let largeNum = (Math.max(...arr)) - 1
            return largeNum;      
