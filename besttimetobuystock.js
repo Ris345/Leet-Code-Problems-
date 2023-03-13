@@ -18,8 +18,10 @@ var maxProfit = function (prices) {
            for (let j = 0; j < prices.length - 1; j++){
               // compare each item in the array 
                const highNum = prices[i] - prices[j + 1]
+               // num < 1 return 0 
                if (highNum < 1){
-                return 0;
+                   return 0;
+                   // push the items in the array 
               } else {
                arr.push(highNum) 
               }   
