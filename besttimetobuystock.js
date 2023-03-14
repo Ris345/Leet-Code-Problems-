@@ -15,17 +15,17 @@ var maxProfit = function (prices) {
   // run a for loop iterating over each item in the array 
    //  choose a day to buy and a day to sell the stock 
      // run a for loop 
-       for (let i = 0; i < prices.length; i++){ // 0(n)
+       for (let i = 0; i < prices.length - 1; i++){ // 0(n)
          for (let j = i + 1; j < prices.length; j++){ // 0(n)
-            // compare each profit 
-           const maxProfit = prices[i] - prices[j] // 0(1)
-            // if the calculation is greater than profit 
-             if (maxProfit > profit){
-               return maxProfit - profit - 1 // 0(1)
-             }
+            // check if [j] > [i]
+             if (prices[j] > prices[i]){
+               let generalProfit = prices[j] - prices[i]
+               // check if generalProfit > profit 
+             if (generalProfit > profit){
+                profit = generalProfit 
+              }
+            }
           }     
-  } 
-  // just return 0
-  return profit; // 0(1)
+     } 
+  return profit; 
 };
-console.log(maxProfit([1,2]));
