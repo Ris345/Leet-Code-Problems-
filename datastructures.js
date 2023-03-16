@@ -150,8 +150,11 @@ function mergeSortedArrays(...arr){
  
  //another way 
  function mergeSortedArrays2(...arr){
-   if (!arr) return 'Try Again with the correct data type!'
+    // edge cases 
+   if (arr.length === 0 ) return arr
    return arr.flat().sort((x,y) => x - y);
  }
  
  console.log(mergeSortedArrays2([0,3,4,31],[4,6,30]))
+
+
