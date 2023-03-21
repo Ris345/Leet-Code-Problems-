@@ -30,11 +30,7 @@ var majorityElement = function (nums) {
   }
 
   for (let key in similarNum) {
-    // O(n)
-    let unpackedItem = Object.values(similarNum);
-    return unpackedItem.reduce((x, y) => {
-      // O(n)
-      return x > y ? parseInt(x) : parseInt(y);
-    });
+    // return the item aka key with the highest occurences 
+    
   }
 };
