@@ -31,6 +31,9 @@ var majorityElement = function (nums) {
 
   for (let key in similarNum) {
     // return the item aka key with the highest occurences 
-    
-  }
+    let check =  Object.values(similarNum)
+    return check.reduce((x,y) => {
+      return x > y ? x: y; 
+    }, 0)  
+   }
 };
