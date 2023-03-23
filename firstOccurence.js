@@ -14,14 +14,30 @@
 // step 2 if the value of needle item is in the haystack then return the index of that item 
 // step 3 else return - 1
 
+
+
+
 var strStr = function(haystack, needle) {
-    // we will loop throught the haystack 
-     // if needle is in the haystack
-       // return the index of the value of needle in haystack
-    // else
-      // return - 1
-    
+  debugger; 
+  let arr = []
+  let spltStr = haystack.split('')   
+  console.log(spltStr)
+  let spltStr2 = needle.split('')
+  for (let i = 0; i < spltStr.length; i++){ //O(n)
+    for(let j = 0; j < spltStr2.length; j++){ // O(n)
+       if (spltStr[i] === spltStr2[j])  {
+         // return Array.isArray(spltStr) ? spltStr.findIndex(spltStr[i]) : 'error';
+         
+       }
+    }
+  }
+ return arr; 
 };
+
+//console.log(strStr("sadbutsad", 'sad'))
+
+
+
 
 
 
