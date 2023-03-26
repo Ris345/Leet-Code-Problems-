@@ -18,23 +18,36 @@
 
 
 var strStr = function(haystack, needle) {
+  let index = 0
   debugger; 
-  let arr = []
+//    handle the edge case 
+ if (haystack.length === 0 || needle.length === 0){
+   return - 1
+ }
+// perform the operation 
   let spltStr = haystack.split('')   
-  console.log(spltStr)
   let spltStr2 = needle.split('')
   for (let i = 0; i < spltStr.length; i++){ //O(n)
     for(let j = 0; j < spltStr2.length; j++){ // O(n)
        if (spltStr[i] === spltStr2[j])  {
-         // return Array.isArray(spltStr) ? spltStr.findIndex(spltStr[i]) : 'error';
-         
+         index = i
+       } else {
+         return -1 
        }
     }
   }
- return arr; 
+ return index;
 };
 
-//console.log(strStr("sadbutsad", 'sad'))
+
+console.log(strStr("sadbutsad", 'sad'))
+console.log(strStr("leetcode", 'leeto'))
+
+
+
+
+
+// console.log(strStr("sadbutsad", 'sad'))
 
 
 
