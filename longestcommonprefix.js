@@ -6,23 +6,23 @@
 // work in progress
 var longestCommonPrefix = function (strs) {
   if (strs.length === 0) {
-    return ""
+    return "";
   }
   if (strs.length === 1) {
-    return strs[0]
-}
-  let prefix = ""
-  
-  for (let i = 0; i < strs[0].length; i++){
-    for (let j = 0; j < strs.length; j++){
+    return strs[0];
+  }
+  let prefix = "";
+
+  for (let i = 0; i < strs[0].length; i++) {
+    for (let j = 0; j < strs.length; j++) {
       if (strs[j][i] === strs[0][i]) {
-        continue; 
+        continue;
       } else {
-        return prefix; 
+        return prefix;
       }
     }
-    prefix += strs[0][i]
+    prefix += strs[0][i];
   }
- 
-  return prefix; 
+
+  return prefix;
 };
