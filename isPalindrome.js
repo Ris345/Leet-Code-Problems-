@@ -1,5 +1,4 @@
 var isPalindrome = function(s) {
-    debugger; 
   //  filter all tHE ALPHA NUMERCI CHARS
   //    split.reverse the string 1
   //   for the second Str keep the orginal string and only remove the alphanumeric 
@@ -16,6 +15,6 @@ var isPalindrome = function(s) {
      }
   };
   
-  console.log(isPalindrome(s))
+
   
   
