@@ -5,7 +5,6 @@
  */
 
 
-
 Array.prototype.last = function() {
     //       find the last element of the arr 
        return this.length === 0 ? -1 : this.pop();
@@ -13,5 +12,5 @@ Array.prototype.last = function() {
     };
 
     
-    
+
 
