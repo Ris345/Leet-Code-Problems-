@@ -206,3 +206,21 @@ console.log(myHashTable.set("apples", 54));
 console.log(myHashTable.set("oranges", 2));
 console.log(myHashTable.get("apples"));
 myHashTable.keys();
+
+
+
+
+// time complexity O(n2) -- not good 
+let num = [2,3,4,5]
+function checkDuplicates(num){
+  debugger; 
+   for (let i = 0; i < num.length; i++){
+     for (let j = i + 1;j < num.length - 1; j++){
+       if (num[i] == num[j]){
+         return num[i]
+       }
+     }
+   }
+   return undefined 
+}
+console.log(checkDuplicates(num))
