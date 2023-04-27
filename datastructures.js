@@ -207,20 +207,106 @@ console.log(myHashTable.set("oranges", 2));
 console.log(myHashTable.get("apples"));
 myHashTable.keys();
 
+// time complexity O(n2) -- not good
+let num = [2, 3, 4, 5];
+function checkDuplicate(num) {
+  debugger;
+  for (let i = 0; i < num.length; i++) {
+    for (let j = i + 1; j < num.length - 1; j++) {
+      if (num[i] == num[j]) {
+        return num[i];
+      }
+    }
+  }
+  return undefined;
+}
+// console.log(checkDuplicates(num))
+
+// optimized solution using hashMap
+function checkDuplicates(num) {
+  let obj = {};
+  for (let i = 0; i < num.length; i++) {
+    if (obj[nums[i]] !== undefined) {
+      return num[i];
+    } else {
+      obj[num[i]] = i;
+    }
+    console.log(obj);
+  }
+  return undefined;
+}
+
+// console.log(checkDuplicate(num))
+// let arr = [2,1,1,2,3,5,1,2,4]
+
+// function num(arr){
+//   debugger; 
+//   let newArr = []
+//  let obj = {}
+//  for(let i = 0; i < arr.length; i++){
+//     if (obj.hasOwnProperty(arr[i])){
+//       newArr.push(arr[i])
+//     } 
+//  }
+//   return newArr[0]
+// }
+
+// O(n2)
+
+// function num(arr){
+//   let newArr = []
+//   debugger; 
+//   let obj = {}
+  
+//    for (let i = 0; i < arr.length; i++){
+//      for(let j = i + 1; j < arr.length; j++){
+//        if(arr[i] === arr[j]){
+//            obj[arr[i]] = 1
+//        } 
+//      }
+   
+//    }
+//    // return undefined
+//   return obj
+// }
+
+
+// console.log(num(arr));
 
 
 
-// time complexity O(n2) -- not good 
-let num = [2,3,4,5]
-function checkDuplicates(num){
-  debugger; 
-   for (let i = 0; i < num.length; i++){
-     for (let j = i + 1;j < num.length - 1; j++){
-       if (num[i] == num[j]){
-         return num[i]
+// 10 ---> 5 -----> 16
+
+let mylinkedList = {
+  head: {
+    value: 10,
+    next: {
+     value: 5, 
+     next: {
+       value: 16,
+       next:{
+         value: null
        }
      }
-   }
-   return undefined 
+  }
+  }
 }
-console.log(checkDuplicates(num))
+
+
+class LinkedList {
+  constructor(value){
+    this.head = {
+      value: value,
+      next: null
+    }
+    this.tail = this.head;
+    this.length = 1
+  }
+  append(value){
+//     code 
+  }
+}
+
+let mylinkedlist = new  LinkedList(10);
+
+console.log(mylinkedlist)
