@@ -240,13 +240,13 @@ function checkDuplicates(num) {
 // let arr = [2,1,1,2,3,5,1,2,4]
 
 // function num(arr){
-//   debugger; 
+//   debugger;
 //   let newArr = []
 //  let obj = {}
 //  for(let i = 0; i < arr.length; i++){
 //     if (obj.hasOwnProperty(arr[i])){
 //       newArr.push(arr[i])
-//     } 
+//     }
 //  }
 //   return newArr[0]
 // }
@@ -255,25 +255,22 @@ function checkDuplicates(num) {
 
 // function num(arr){
 //   let newArr = []
-//   debugger; 
+//   debugger;
 //   let obj = {}
-  
+
 //    for (let i = 0; i < arr.length; i++){
 //      for(let j = i + 1; j < arr.length; j++){
 //        if(arr[i] === arr[j]){
 //            obj[arr[i]] = 1
-//        } 
+//        }
 //      }
-   
+
 //    }
 //    // return undefined
 //   return obj
 // }
 
-
 // console.log(num(arr));
-
-
 
 // 10 ---> 5 -----> 16
 
@@ -281,32 +278,31 @@ let mylinkedList = {
   head: {
     value: 10,
     next: {
-     value: 5, 
-     next: {
-       value: 16,
-       next:{
-         value: null
-       }
-     }
-  }
-  }
-}
-
+      value: 5,
+      next: {
+        value: 16,
+        next: {
+          value: null,
+        },
+      },
+    },
+  },
+};
 
 class LinkedList {
-  constructor(value){
+  constructor(value) {
     this.head = {
       value: value,
-      next: null
-    }
+      next: null,
+    };
     this.tail = this.head;
-    this.length = 1
+    this.length = 1;
   }
-  append(value){
-//     code 
+  append(value) {
+    //     code
   }
 }
 
-let mylinkedlist = new  LinkedList(10);
+let mylinkedlist = new LinkedList(10);
 
-console.log(mylinkedlist)
+// console.log(mylinkedlist)
