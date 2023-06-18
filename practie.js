@@ -23,6 +23,9 @@
 // console.log(arr1 !== removeItem(arr1, 1)); // true
 // console.log(arr1.length)
 
+
+// repracticing old problems  
+
 // // test case hello  ---> Hello
 // so far this function capitalizes one word only
 function capitalize(str) {
@@ -55,4 +58,22 @@ function capitalizemoreWords(str) {
   return test.join(",");
 }
 
-console.log(capitalizemoreWords("give me coding job"));
+// console.log(capitalizemoreWords("give me coding job"));
+
+
+const strs = ["eat","tea","tan","ate","nat","bat"] 
+ 
+var groupAnagrams = function(strs) {
+    // if anagramas are similar group them and push them into a new array
+    // make a nested array 
+    // to check if a word is anagram sort it then compare with the word 
+    const words = strs.sort() 
+    const arr = []
+    let i = 0
+    let len = words.length 
+    for ( i;  i < len; i++){
+            arr.push(words[i])
+            console.log(arr)
+
+    }
+};
