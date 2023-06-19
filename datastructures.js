@@ -472,3 +472,38 @@ console.log(myLinkedList.printList());
 console.log(myLinkedList.insert(3, 56));
 
 console.log(myLinkedList.remove(3));
+
+
+//  linked lists practice 
+
+// singly linked list 
+const testList = {
+  value: value,
+  next: {
+    value: value,
+    nest:null
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
