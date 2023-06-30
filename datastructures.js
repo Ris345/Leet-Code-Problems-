@@ -662,36 +662,97 @@ let testerList = {
 
 
 
+// class Node {
+//   constructor(value){
+//     this.value = value;
+//     this.next = null;
+//   }
+// }
+
+// class Stack {
+//   constructor(){
+//    this.array = []
+//   } 
+//   peek() {
+//     return this.array[this.array.length - 1]
+//   }
+//   push(value) {
+//     this.array.push(value)
+//     return this;
+//   }
+//   pop() {
+//     this.array.pop()
+//     return this
+//   }
+//   //isEmpty
+// }
+
+// const myStack = new Stack();
+// console.log(myStack.peek())
+// console.log(myStack.push('google'))
+// console.log(myStack.push('udemy'))
+// console.log(myStack.push('youtube'))
+// console.log(myStack.pop())
+// console.log(myStack.pop())
+// console.log(myStack.pop())
+
+
+
 class Node {
-  constructor(value){
+  constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
 
-class Stack {
+class Queue {
   constructor(){
-   this.array = []
-  } 
-  peek() {
-    return this.array[this.array.length - 1]
+    this.first = null;
+    this.last = null;
+    this.length = 0;
   }
-  push(value) {
-    this.array.push(value)
-    return this;
+  peek(value) {
+    return this.first; 
   }
-  pop() {
-    this.array.pop()
+  enqueue(value) {
+    const newNode = new Node(value)
+    this.next = this.value
+    if (this.length === 0) {
+      this.first = newNode
+      this.last = newNode
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    this.length++
     return this
   }
-  //isEmpty
+  dequeue() {
+    if (!this.first) return null 
+    if (this.first === this.last) {
+      this.last = null
+    }
+    const holdingPointer = this.first
+    this.first = this.first.next
+    this.length--;
+    return this
+  }
+  //isEmpty;
 }
 
-const myStack = new Stack();
-console.log(myStack.peek())
-console.log(myStack.push('google'))
-console.log(myStack.push('udemy'))
-console.log(myStack.push('youtube'))
-console.log(myStack.pop())
-console.log(myStack.pop())
-console.log(myStack.pop())
+const myQueue = new Queue();
+console.log(myQueue.enqueue('Rishav'))
+console.log(myQueue.enqueue('Jinko'))
+console.log(myQueue.enqueue('Samir'))
+console.log(myQueue.enqueue('John'))
+console.log(myQueue.peek())
+console.log(myQueue.dequeue())
+console.log(myQueue.dequeue())
+console.log(myQueue.dequeue())
+console.log(myQueue.dequeue())
+
+//Joy
+//Matt
+//Pavel
+//Samir
+
