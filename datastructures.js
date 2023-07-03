@@ -571,18 +571,18 @@ let testerList = {
 //     return this.printList();
 //   }
 //   reverse(index) {
-//     if (!this.head.next) return this 
+//     if (!this.head.next) return this
 //     let first = this.head
 //     let tail = this.head
 //     let second = first.next
 //     while (second) {
 //       const temp = second.next
 //       second.next = first
-//       first = second 
+//       first = second
 //       second = temp
 //     }
-//     this.head.next = null 
-//     this.head = first 
+//     this.head.next = null
+//     this.head = first
 //     return this.printList()
 //   }
 // }
@@ -602,10 +602,7 @@ let testerList = {
 
 // // console.log(myLinkedList.remove(3));
 
-
 // console.log(myLinkedList.reverse())
-
-
 
 // class Node {
 //   constructor(value){
@@ -639,7 +636,7 @@ let testerList = {
 //   pop() {
 //     if (!this.top) return null
 //     if (this.top === this.bottom) {
-//       this.bottom = null 
+//       this.bottom = null
 //     }
 //     const holdingPointer = this.top
 //     this.top = this.top.next
@@ -659,9 +656,6 @@ let testerList = {
 // console.log(myStack.peek())
 // console.log(myStack.peek())
 
-
-
-
 // class Node {
 //   constructor(value){
 //     this.value = value;
@@ -672,7 +666,7 @@ let testerList = {
 // class Stack {
 //   constructor(){
 //    this.array = []
-//   } 
+//   }
 //   peek() {
 //     return this.array[this.array.length - 1]
 //   }
@@ -696,8 +690,6 @@ let testerList = {
 // console.log(myStack.pop())
 // console.log(myStack.pop())
 
-
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -706,53 +698,60 @@ class Node {
 }
 
 class Queue {
-  constructor(){
+  constructor() {
     this.first = null;
     this.last = null;
     this.length = 0;
   }
   peek(value) {
-    return this.first; 
+    return this.first;
   }
   enqueue(value) {
-    const newNode = new Node(value)
-    this.next = this.value
+    const newNode = new Node(value);
+    this.next = this.value;
     if (this.length === 0) {
-      this.first = newNode
-      this.last = newNode
+      this.first = newNode;
+      this.last = newNode;
     } else {
       this.last.next = newNode;
       this.last = newNode;
     }
-    this.length++
-    return this
+    this.length++;
+    return this;
   }
   dequeue() {
-    if (!this.first) return null 
+    if (!this.first) return null;
     if (this.first === this.last) {
-      this.last = null
+      this.last = null;
     }
-    const holdingPointer = this.first
-    this.first = this.first.next
+    const holdingPointer = this.first;
+    this.first = this.first.next;
     this.length--;
-    return this
+    return this;
   }
   //isEmpty;
 }
 
 const myQueue = new Queue();
-console.log(myQueue.enqueue('Rishav'))
-console.log(myQueue.enqueue('Jinko'))
-console.log(myQueue.enqueue('Samir'))
-console.log(myQueue.enqueue('John'))
-console.log(myQueue.peek())
-console.log(myQueue.dequeue())
-console.log(myQueue.dequeue())
-console.log(myQueue.dequeue())
-console.log(myQueue.dequeue())
+console.log(myQueue.enqueue("Rishav"));
+console.log(myQueue.enqueue("Jinko"));
+console.log(myQueue.enqueue("Samir"));
+console.log(myQueue.enqueue("John"));
+console.log(myQueue.peek());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
+console.log(myQueue.dequeue());
 
 //Joy
 //Matt
 //Pavel
 //Samir
 
+// trees
+
+function BinaryTreeNode(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
