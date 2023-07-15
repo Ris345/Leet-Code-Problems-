@@ -690,58 +690,58 @@ let testerList = {
 // console.log(myStack.pop())
 // console.log(myStack.pop())
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.next = null;
+//   }
+// }
 
-class Queue {
-  constructor() {
-    this.first = null;
-    this.last = null;
-    this.length = 0;
-  }
-  peek(value) {
-    return this.first;
-  }
-  enqueue(value) {
-    const newNode = new Node(value);
-    this.next = this.value;
-    if (this.length === 0) {
-      this.first = newNode;
-      this.last = newNode;
-    } else {
-      this.last.next = newNode;
-      this.last = newNode;
-    }
-    this.length++;
-    return this;
-  }
-  dequeue() {
-    if (!this.first) return null;
-    if (this.first === this.last) {
-      this.last = null;
-    }
-    const holdingPointer = this.first;
-    this.first = this.first.next;
-    this.length--;
-    return this;
-  }
-  //isEmpty;
-}
+// class Queue {
+//   constructor() {
+//     this.first = null;
+//     this.last = null;
+//     this.length = 0;
+//   }
+//   peek(value) {
+//     return this.first;
+//   }
+//   enqueue(value) {
+//     const newNode = new Node(value);
+//     this.next = this.value;
+//     if (this.length === 0) {
+//       this.first = newNode;
+//       this.last = newNode;
+//     } else {
+//       this.last.next = newNode;
+//       this.last = newNode;
+//     }
+//     this.length++;
+//     return this;
+//   }
+//   dequeue() {
+//     if (!this.first) return null;
+//     if (this.first === this.last) {
+//       this.last = null;
+//     }
+//     const holdingPointer = this.first;
+//     this.first = this.first.next;
+//     this.length--;
+//     return this;
+//   }
+//   //isEmpty;
+// }
 
-const myQueue = new Queue();
-console.log(myQueue.enqueue("Rishav"));
-console.log(myQueue.enqueue("Jinko"));
-console.log(myQueue.enqueue("Samir"));
-console.log(myQueue.enqueue("John"));
-console.log(myQueue.peek());
-console.log(myQueue.dequeue());
-console.log(myQueue.dequeue());
-console.log(myQueue.dequeue());
-console.log(myQueue.dequeue());
+// const myQueue = new Queue();
+// console.log(myQueue.enqueue("Rishav"));
+// console.log(myQueue.enqueue("Jinko"));
+// console.log(myQueue.enqueue("Samir"));
+// console.log(myQueue.enqueue("John"));
+// console.log(myQueue.peek());
+// console.log(myQueue.dequeue());
+// console.log(myQueue.dequeue());
+// console.log(myQueue.dequeue());
+// console.log(myQueue.dequeue());
 
 //Joy
 //Matt
@@ -750,8 +750,74 @@ console.log(myQueue.dequeue());
 
 // trees
 
-function BinaryTreeNode(value) {
-  this.value = value;
-  this.left = null;
-  this.right = null;
+// function BinaryTreeNode(value) {
+//   this.value = value;
+//   this.left = null;
+//   this.right = null;
+// }
+
+class Node {
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+  insert(value) {
+    //Code here
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          // left
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            return this;
+          }
+          currentNode = currentNode.left;
+        } else {
+          // right
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
+    }
+  }
+  lookup(value) {
+    //Code here
+    return this.value ? this.value : null;
+  }
+  // remove
+}
+
+const tree = new BinarySearchTree();
+console.log(tree.insert(9));
+// tree.insert(4);
+// tree.insert(6);
+// tree.insert(20);
+// tree.insert(170);
+// tree.insert(15);
+// tree.insert(1);
+JSON.stringify(traverse(tree.root));
+
+//     9
+//  4     20
+//1  6  15  170
+
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
+  return tree;
 }
