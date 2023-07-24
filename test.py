@@ -88,12 +88,15 @@ numbers = [1,2,3,4,5,6,7,8,9,10]
 # writing a function to learn about recursion 
 # this function keeps calling itself until it reaches n <=1 then the conditon returns 1 
 
-def factorial (n):
-    if n <= 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+# def factorial (n):
+#     if n <= 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
     
     
 
-print(factorial(4))
+# print(factorial(4))
+
+
+
