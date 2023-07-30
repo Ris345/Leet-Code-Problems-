@@ -55,14 +55,32 @@
 // console.log(factorial(4));
 
 
-const factorial = (n) => {
-    debugger; 
-    let output = 1
-    for (let i = 2; i <= n; i++){
-        output = output * i 
+// const factorial = (n) => {
+//     debugger; 
+//     let output = 1
+//     for (let i = 2; i <= n; i++){
+//         output = output * i 
+//     }
+//     return output; 
+// }
+
+
+// console.log(factorial(4))
+
+
+const is_Prime = (n) => {
+    // prime number is a unique number
+    // can only be divided by itself or 1
+    if (n < 2) return false; 
+    let bool = true
+    for (let i = 2; i < n; i++){
+        if (n % i !== 0) {
+           return bool 
+        }
+        bool = false 
+        
     }
-    return output; 
+    return bool 
 }
 
-
-console.log(factorial(4))
+console.log(is_Prime(5))
