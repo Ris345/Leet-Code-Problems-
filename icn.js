@@ -41,7 +41,7 @@ var longestConsecutive = function(nums) {
   if (nums.length === 0) return 0; 
   const number_set = new Set(nums); 
   let start_numbers = []
-  let count = 1
+  let longestCount = 1
   let tempCount = 1
   for (const key of number_set.keys()) {
     if (!number_set.has(key - 1)) {
@@ -49,17 +49,19 @@ var longestConsecutive = function(nums) {
     }
   }
   for (let start_number of start_numbers) {
-    let breaker = true 
-    if (start_numbers.has(start_number + 1)) {
-      tempCount++
-      longestCount = Math.max(longestCount, tempCount)
-      start_numbers++
-    } else {
-      tempCount = 1
-      breaker = false 
+    let breaker = true
+    while (breaker) {
+      if (number_set.has(start_number + 1)) {
+        tempCount++
+        longestCount = Math.max(longestCount, tempCount)
+        start_number++
+      } else {
+        tempCount = 1
+        breaker = false
+      }
     }
   }
-  return longestCount
+  return longestCount;
 };
 
 console.log(longestConsecutive(nums))
