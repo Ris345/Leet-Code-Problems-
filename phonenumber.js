@@ -105,36 +105,71 @@
 
 // console.log(letterCombinations("2"))
 
-var letterCombinations = function (digits) {
-  debugger;
-  if (digits.length === 0) return [];
-  const map = {
-    2: "abc",
-    3: "def",
-    4: "ghi",
-    5: "jkl",
-    6: "mno",
-    7: "pqrs",
-    8: "tuv",
-    9: "wxyz",
-  };
-  let output = [];
-  const backtrack = (i, curr) => {
-    console.log("index", i);
-    console.log("string", curr);
-    if (curr.length === digits.length) {
-      output.push(curr);
-      return;
-    }
-    const letters = map[digits[i]];
-    for (const l of letters) {
-      backtrack(i + 1, curr + l);
-    }
-  };
-  if (digits) {
-    backtrack(0, "");
-  }
-  return output;
-};
+// var letterCombinations = function (digits) {
+//   debugger;
+//   if (digits.length === 0) return [];
+//   const map = {
+//     2: "abc",
+//     3: "def",
+//     4: "ghi",
+//     5: "jkl",
+//     6: "mno",
+//     7: "pqrs",
+//     8: "tuv",
+//     9: "wxyz",
+//   };
+//   let output = [];
+//   const backtrack = (i, curr) => {
+//     console.log("index", i);
+//     console.log("string", curr);
+//     if (curr.length === digits.length) {
+//       console.log("current length:", curr)
+//       console.log("digits length:", digits)
+//       output.push(curr);
+//       return;
+//     }
+//     const letters = map[digits[i]];
+//     for (const l of letters) {
+//       backtrack(i + 1, curr + l);
+//     }
+//   };
+//   if (digits) {
+//     backtrack(0, "");
+//   }
+//   return output;
+// };
 
-console.log(letterCombinations("23"));
+// console.log(letterCombinations("23"));
+
+// var letterCombinations = function (digits) {
+//   debugger;
+//   if (digits.length === 0) return [];
+//   let data = {
+//     2: "abc",
+//     3: "def",
+//     4: "ghi",
+//     5: "jkl",
+//     6: "mno",
+//     7: "pqrs",
+//     8: "tuv",
+//     9: "wxyz",
+//   };
+//   let output = []
+//   const backtrack = (i, curr) => {
+//     if (curr.length === digits.length) {
+//       output.push(curr);
+//       return;
+//     }
+//     const tasks = data[digits[i]];
+//     console.log(tasks)
+//     for (const l of tasks) {
+//       backtrack(i + 1, output + l)
+//     }
+//   };
+//   if (digits) {
+//     backtrack(0, "")
+//   }
+//   return output;
+// };
+
+// console.log(letterCombinations("23"))

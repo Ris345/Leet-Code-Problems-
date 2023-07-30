@@ -99,4 +99,65 @@ numbers = [1,2,3,4,5,6,7,8,9,10]
 # print(factorial(4))
 
 
+# new_list = [1,2,3]
 
+
+# result = new_list[0]
+
+
+# # if 1 in new_list:
+# #     print(True)
+    
+# for n in new_list:
+#     if n == 1:
+#         print(True)
+        
+#     break
+
+
+
+# linked lists 
+
+class Node: 
+    """
+    Object for storing single Linked List 
+    Models two attributes - data and the link to the next node in the list 
+    """
+    data = None
+    nextNode = None
+    
+    def __init__(self, data):
+        self.data = data 
+        
+    def __repr__(self):
+            return "<Node data: %s>" % self.data
+
+
+class LinkedList:
+    """ 
+    Singly Linked List
+    """
+    def __init__(self):
+        self.head = None
+        
+    def is_empty(self):
+        return self.head == None
+    
+    def size(self):
+        """ Returns the number of nodes in the list 
+        takes 0(n) time 
+        """
+        current = self.head
+        count = 0
+        while current:
+            count += 1
+            current = current.next_node 
+        
+        return count 
+    
+    
+    
+        
+        
+        
+        
