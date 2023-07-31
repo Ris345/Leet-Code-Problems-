@@ -25,139 +25,156 @@
 # result = linear_search(numbers, 6)
 # verify(result)
 
-numbers = [1,2,3,4,5,6,7,8,9,10]
-# def binary_search(list, target):
-#     first = 0
-#     last = len(list) - 1
-#     print(last)
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# # def binary_search(list, target):
+# #     first = 0
+# #     last = len(list) - 1
+# #     print(last)
     
-#     while first <= last:
-#         midpoint = (first + last)//2
-#         print(midpoint)
+# #     while first <= last:
+# #         midpoint = (first + last)//2
+# #         print(midpoint)
         
-#         if list[midpoint] == target:
-#             print(target)
-#             return target 
-#         elif list[midpoint] < target:
-#             first = midpoint + 1
-#             print(first)
-#         else:
-#             last = midpoint - 1
-#             print(last)
-#     return None 
+# #         if list[midpoint] == target:
+# #             print(target)
+# #             return target 
+# #         elif list[midpoint] < target:
+# #             first = midpoint + 1
+# #             print(first)
+# #         else:
+# #             last = midpoint - 1
+# #             print(last)
+# #     return None 
     
     
     
-# def verify(index):
-#     if index is not  None:
-#         print('Target found at index : ', index - 1)
-#     else:
-#         print('Not found in list')
+# # def verify(index):
+# #     if index is not  None:
+# #         print('Target found at index : ', index - 1)
+# #     else:
+# #         print('Not found in list')
         
 
-# result = binary_search(numbers, 9)
-# verify(result)
+# # result = binary_search(numbers, 9)
+# # verify(result)
 
-# numbers = [1,2,3,4,5,6,7,8]
-# def recursive_binary_search(list,target):
-#     if len(list) == 0:
-#         return False
-#     else:
-#         midpoint = len(list) // 2
-#         if list[midpoint] == target:
-#             return True 
-#         else: 
-#             if list[midpoint] < target:
-#                 return recursive_binary_search(list[midpoint + 1:], target)
-#             else: 
-#                 return recursive_binary_search(list[:midpoint], target)
+# # numbers = [1,2,3,4,5,6,7,8]
+# # def recursive_binary_search(list,target):
+# #     if len(list) == 0:
+# #         return False
+# #     else:
+# #         midpoint = len(list) // 2
+# #         if list[midpoint] == target:
+# #             return True 
+# #         else: 
+# #             if list[midpoint] < target:
+# #                 return recursive_binary_search(list[midpoint + 1:], target)
+# #             else: 
+# #                 return recursive_binary_search(list[:midpoint], target)
             
             
-# def verify (result):
-#     print("target found", result)
+# # def verify (result):
+# #     print("target found", result)
  
-# result = recursive_binary_search(numbers, 12)
+# # result = recursive_binary_search(numbers, 12)
 
-# verify(result)   
+# # verify(result)   
     
-# result = recursive_binary_search(numbers, 5)
+# # result = recursive_binary_search(numbers, 5)
 
-# verify(result)
+# # verify(result)
 
 
-# writing a function to learn about recursion 
-# this function keeps calling itself until it reaches n <=1 then the conditon returns 1 
+# # writing a function to learn about recursion 
+# # this function keeps calling itself until it reaches n <=1 then the conditon returns 1 
 
-# def factorial (n):
-#     if n <= 1:
-#         return 1
-#     else:
-#         return n * factorial(n - 1)
+# # def factorial (n):
+# #     if n <= 1:
+# #         return 1
+# #     else:
+# #         return n * factorial(n - 1)
     
     
 
-# print(factorial(4))
+# # print(factorial(4))
 
 
-# new_list = [1,2,3]
+# # new_list = [1,2,3]
 
 
-# result = new_list[0]
+# # result = new_list[0]
 
 
-# # if 1 in new_list:
-# #     print(True)
+# # # if 1 in new_list:
+# # #     print(True)
     
-# for n in new_list:
-#     if n == 1:
-#         print(True)
+# # for n in new_list:
+# #     if n == 1:
+# #         print(True)
         
-#     break
+# #     break
 
 
 
-# linked lists 
+# # linked lists 
 
-class Node: 
-    """
-    Object for storing single Linked List 
-    Models two attributes - data and the link to the next node in the list 
-    """
-    data = None
-    nextNode = None
+# class Node: 
+#     """
+#     Object for storing single Linked List 
+#     Models two attributes - data and the link to the next node in the list 
+#     """
+#     data = None
+#     nextNode = None
     
-    def __init__(self, data):
-        self.data = data 
+#     def __init__(self, data):
+#         self.data = data 
         
-    def __repr__(self):
-            return "<Node data: %s>" % self.data
+#     def __repr__(self):
+#             return "<Node data: %s>" % self.data
 
 
-class LinkedList:
-    """ 
-    Singly Linked List
-    """
-    def __init__(self):
-        self.head = None
+# class LinkedList:
+#     """ 
+#     Singly Linked List
+#     """
+#     def __init__(self):
+#         self.head = None
         
-    def is_empty(self):
-        return self.head == None
+#     def is_empty(self):
+#         return self.head == None
     
-    def size(self):
-        """ Returns the number of nodes in the list 
-        takes 0(n) time 
-        """
-        current = self.head
-        count = 0
-        while current:
-            count += 1
-            current = current.next_node 
+#     def size(self):
+#         """ Returns the number of nodes in the list 
+#         takes 0(n) time 
+#         """
+#         current = self.head
+#         count = 0
+#         while current:
+#             count += 1
+#             current = current.next_node 
         
-        return count 
+#         return count 
     
     
+from typing import List
+ 
     
+numbers = [2,7,11,15]
+    
+class Solution:
+        def twoSum(self, numbers: List[int], target: int) -> List[int]:
+            left = 0
+            right = len(numbers) - 1
+            while left < right: 
+                sum = numbers[left] + numbers[right]
+                if sum == target:
+                    return [left + 1, right + 1]
+                elif right > left:
+                    right -= 1
+                else:
+                    left += 1
+            return []
         
-        
-        
+sol = Solution()
+print(sol.twoSum(numbers, 9))
         

@@ -68,19 +68,63 @@
 // console.log(factorial(4))
 
 
-const is_Prime = (n) => {
-    // prime number is a unique number
-    // can only be divided by itself or 1
-    if (n < 2) return false; 
-    let bool = true
-    for (let i = 2; i < n; i++){
-        if (n % i !== 0) {
-           return bool 
-        }
-        bool = false 
+// const is_Prime = (n) => {
+//     // prime number is a unique number
+//     // can only be divided by itself or 1
+//     if (n < 2) return false; 
+//     let bool = true
+//     for (let i = 2; i < n; i++){
+//         if (n % i !== 0) {
+//            return bool 
+//         }
+//         bool = false 
         
-    }
-    return bool 
-}
+//     }
+//     return bool 
+// }
 
-console.log(is_Prime(5))
+// console.log(is_Prime(5))
+
+// // optimal solution 
+// const is_prime = (n) => {
+//     // prime number is a unique number
+//     // can only be divided by itself or 1
+//     if (n < 2) return false; 
+//     let bool = true
+//     for (let i = 2; i <= Math.sqrt(n); i++){
+//         if (n % i !== 0) {
+//            return bool 
+//         }
+//         bool = false 
+        
+//     }
+//     return bool 
+// }
+
+// console.log(is_prime(5))
+
+
+
+// const power_of_two = (n) => {
+//     debugger; 
+//     let bool = true 
+//     let num = 0
+//     for (let i = 1; i < n; i++){
+//         if (2 ** 0 === 1) {
+//             num = 1
+//         }
+
+//         if (2 ** i === n) {
+//             bool
+//         } else {
+//             bool = false 
+//         }
+        
+//     }
+//     return bool 
+// }
+
+// console.log(power_of_two(6))
+
+
+
