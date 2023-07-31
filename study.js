@@ -127,4 +127,47 @@
 // console.log(power_of_two(6))
 
 
+// const is_power_of_two = (n) => {
+//     debugger; 
+//     let bool = false 
+//     if (2 ** 0 === 1) return !bool
+//     for (let i = 1; i < n; i++){
+//         if (2 ** i === n) {
+//             bool = true 
+//         }
+//         bool = false 
+//     }  
+//     return bool
+// }
+
+
+// console.log(is_power_of_two(5))
+
+// const is_power_of_two = (n) => {
+//     if (n < 1) return false 
+    
+//     while (n > 1) {
+//         if (n % 2 !== 0) {
+//             return false 
+//         }
+//         n = n / 2
+//     }
+//     return true 
+// }
+
+// console.log(is_power_of_two(2))
+// console.log(is_power_of_two(4))
+// console.log(is_power_of_two(6))
+// console.log(is_power_of_two(5))
+
+
+const isPowerOfTwoBitWise = (n) => {
+    if (n < 1) {
+        return false 
+    }
+    return (n & (n - 1)) === 0
+}
+
+
+console.log(isPowerOfTwoBitWise(4))
 
