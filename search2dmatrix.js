@@ -6,8 +6,6 @@ const matrix = [
 
 var searchMatrix = function (matrix, target) {
     debugger; 
-  // loop through the matrix
-  //
   let bool = false;
   for (let i = 0; i < matrix.length; i++) {
     let matrix_num = matrix[i];

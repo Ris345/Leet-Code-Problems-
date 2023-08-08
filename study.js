@@ -161,13 +161,52 @@
 // console.log(is_power_of_two(5))
 
 
-const isPowerOfTwoBitWise = (n) => {
-    if (n < 1) {
-        return false 
-    }
-    return (n & (n - 1)) === 0
+// const isPowerOfTwoBitWise = (n) => {
+//     if (n < 1) {
+//         return false 
+//     }
+//     return (n & (n - 1)) === 0
+// }
+
+
+// console.log(isPowerOfTwoBitWise(4))
+
+// const recursive_fib = (n) => {
+//     debugger; 
+//     if (n < 2) {
+//         return n
+//     }
+//     return recursive_fib(n - 1) + recursive_fib(n - 2)
+// }
+
+
+// console.log(recursive_fib(3))
+
+
+// const fib_seq = (n) => {
+//     let fib = [0,1]
+//     if (n < 2) return n
+//     for (let i = 2; i < n; i++){
+//         fib[i] = fib[i - 1] + fib[i - 2]
+//     }
+// return fib
+// }
+
+// console.log(fib_seq(5))
+
+
+
+const factorial_recurs = (n) => {
+    debugger; 
+    let output = 0
+    if (n <= 1) {
+        return 1 
+    } 
+    output = n * factorial_recurs(n - 1)
+    return output; 
 }
 
+console.log(factorial_recurs(4))
 
-console.log(isPowerOfTwoBitWise(4))
+
 
