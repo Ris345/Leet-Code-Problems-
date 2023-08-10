@@ -196,17 +196,28 @@
 
 
 
-const factorial_recurs = (n) => {
-    debugger; 
+// const factorial_recurs = (n) => {
+//     debugger; 
+//     let output = 0
+//     if (n <= 1) {
+//         return 1 
+//     } 
+//     output = n * factorial_recurs(n - 1)
+//     return output; 
+// }
+
+// console.log(factorial_recurs(4))
+
+
+
+const factorial = (n) => {
     let output = 0
-    if (n <= 1) {
-        return 1 
-    } 
-    output = n * factorial_recurs(n - 1)
-    return output; 
+    if (n < 1) return 1
+    output = n * factorial(n - 1)
+    return output
 }
 
-console.log(factorial_recurs(4))
+console.log(factorial(4))
 
 
 
