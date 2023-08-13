@@ -219,8 +219,8 @@
 
 // console.log(find_item(arr,t))
 
-let arr = [-5, 2, 4, 6, 10];
-let t = 6;
+// let arr = [-5, 2, 4, 6, 10];
+// let t = 6;
 
 // const binary_search = (arr, t) => {
 //     let left = 0
@@ -273,27 +273,65 @@ let t = 6;
 
 // console.log(binary_search(arr, t));
 
-const binary_search_recurs = (arr, t) => {
-  return search(arr, t, 0, arr.length - 1);
+// const binary_search_recurs = (arr, t) => {
+//   return search(arr, t, 0, arr.length - 1);
+// };
+
+// const search = (arr, t, left, right) => {
+//   if (left > right) return -1;
+//   let middle = Math.floor((left + right) / 2);
+//   if (t === arr[middle]) {
+//     return middle;
+//   }
+
+//   if (t < arr[middle]) {
+//     return search(arr, t, left, middle - 1);
+//   } else {
+//     return search(arr, t, middle + 1, right);
+//   }
+// };
+
+// console.log(binary_search_recurs(arr, t));
+
+// need to finish tracing how the code runs in a piece of paper
+
+// let arr = [-5, 2, 4, 6, 10]
+// let target = 6
+// const recurs_binary_search = (arr, target) => {
+//   debugger;
+//   return search(arr, target, 0 , arr.length - 1)
+// }
+
+// const search = (arr,target, left, right) => {
+//   if (left > right) return -1
+
+//   let middle = Math.floor((left + right) / 2)
+//   console.log('middle:', middle  )
+//   if (target === arr[middle]) {
+//     return middle
+//   }
+
+//   if (target < arr[middle]) {
+//     return search (arr,target, left, middle - 1)
+//   } else {
+//     return search (arr, target, middle + 1, right)
+//   }
+// }
+// console.log(recurs_binary_search(arr, target))
+
+let arr = [-6, 20, 8, -2, 4];
+
+const bubble_sort = (arr) => {
+  if (arr[0] > arr[1]) {
+    arr[0] = arr[1];
+  }
+  if (arr[1] > arr[2]) {
+    arr[1] = arr[2];
+  }
+  if (arr[3] > arr[4]) {
+    arr[3] = arr[4];
+  }
+  return arr;
 };
 
-const search = (arr, t, left, right) => {
-  if (left > right) return -1;
-  let middle = Math.floor((left + right) / 2);
-  if (t === arr[middle]) {
-    return middle;
-  }
-
-  if (t < arr[middle]) {
-    return search(arr, t, left, middle - 1);
-  } else {
-    return search(arr, t, middle + 1, right);
-  }
-};
-
-console.log(binary_search_recurs(arr, t));
-
-
-// need to finish tracing how the code runs in a piece of paper 
-
-
+console.log(bubble_sort(arr));

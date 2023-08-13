@@ -156,25 +156,65 @@
 #         return count 
     
     
-from typing import List
+# from typing import List
  
     
-numbers = [2,7,11,15]
+# numbers = [2,7,11,15]
     
-class Solution:
-        def twoSum(self, numbers: List[int], target: int) -> List[int]:
-            left = 0
-            right = len(numbers) - 1
-            while left < right: 
-                sum = numbers[left] + numbers[right]
-                if sum == target:
-                    return [left + 1, right + 1]
-                elif right > left:
-                    right -= 1
-                else:
-                    left += 1
-            return []
+# class Solution:
+#         def twoSum(self, numbers: List[int], target: int) -> List[int]:
+#             left = 0
+#             right = len(numbers) - 1
+#             while left < right: 
+#                 sum = numbers[left] + numbers[right]
+#                 if sum == target:
+#                     return [left + 1, right + 1]
+#                 elif right > left:
+#                     right -= 1
+#                 else:
+#                     left += 1
+#             return []
         
-sol = Solution()
-print(sol.twoSum(numbers, 9))
+# sol = Solution()
+# print(sol.twoSum(numbers, 9))
         
+
+class Node: 
+    data = None
+    next_node = None
+    
+    def __init__(self, data):
+        self.data = data 
+        
+    def __repr__(self):
+        return "<Node data: %s>" % self.data
+
+
+class LinkedList:
+    
+    def __init__(self):
+        self.head = None
+         
+    def is_empty(self):
+        return self.head == None
+    
+    def size(self):
+        current = self.head
+        count = 0
+        
+        while current:
+            count += 1
+            current = current.next_node
+            
+        return count 
+    
+    def add(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+        
+    
+    
+
+
+
