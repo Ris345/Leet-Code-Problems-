@@ -322,16 +322,56 @@
 let arr = [-6, 20, 8, -2, 4];
 
 const bubble_sort = (arr) => {
-  if (arr[0] > arr[1]) {
-    arr[0] = arr[1];
-  }
-  if (arr[1] > arr[2]) {
-    arr[1] = arr[2];
-  }
-  if (arr[3] > arr[4]) {
-    arr[3] = arr[4];
-  }
-  return arr;
-};
+  let swapped = true 
+  do {
+    for (let i = 0; i < arr.length - 1; i--){
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i]
+        arr[i] = arr[i + 1]
+        arr[i + 1] = temp 
+      }
+    }
+  } while (swapped)
+}
 
-console.log(bubble_sort(arr));
+
+
+
+
+
+
+// const bubble_sort = (arr) => {
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = i + 1; j < arr.length; j++){
+//       if (arr[i] > arr[j]) {
+
+//         let temp = arr[i]
+//         arr[i] = arr[j]
+//         arr[j] = temp
+
+//       }
+//     }
+//   }
+//   return arr; 
+// };
+
+// console.log(bubble_sort(arr));
+
+
+const insertion_sort = (arr) => {
+  let NYS = 0
+  let SE = 0
+  for (let i = 0; i < arr.length; i++){
+    for (let j = i + 1; i < arr.length - 1; j++){
+      if (arr[i] > arr[j]) {
+        SE = arr[i]
+        NYS = arr[j]
+      } 
+    }
+  }
+  console.log('SE:', SE)
+  console.log('NYS:', NYS)
+}
+
+
+console.log(insertion_sort(arr))
