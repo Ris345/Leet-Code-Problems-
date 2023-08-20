@@ -319,7 +319,7 @@
 // }
 // console.log(recurs_binary_search(arr, target))
 
-let arr = [-6, 20, 8, -2, 4];
+// let arr = [-6, 20, 8, -2, 4];
 
 const bubble_sort = (arr) => {
   let swapped = true 
@@ -356,21 +356,39 @@ const bubble_sort = (arr) => {
 // };
 
 // console.log(bubble_sort(arr));
+// const insertion_sort = (arr) => {
+//   let NYS = 0
+//   let SE = 0
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = i + 1; i < arr.length - 1; j++){
+//       if (arr[i] > arr[j]) {
+//         SE = arr[i]
+//         NYS = arr[j]
+//       } 
+//     }
+//   }
+//   console.log('SE:', SE)
+//   console.log('NYS:', NYS)
+// }
 
+
+// console.log(insertion_sort(arr))
+
+
+let arr = [8,20,-2,4,-6]
 
 const insertion_sort = (arr) => {
-  let NYS = 0
-  let SE = 0
-  for (let i = 0; i < arr.length; i++){
-    for (let j = i + 1; i < arr.length - 1; j++){
-      if (arr[i] > arr[j]) {
-        SE = arr[i]
-        NYS = arr[j]
-      } 
+  debugger; 
+  for (let i = 1; i < arr.length; i++){
+    let number_to_insert = arr[i]
+    let j = i - 1
+    while (j >= 0 && arr[j] > number_to_insert) {
+      arr[j + 1] = arr[j]
+      j = j - 1
     }
+    arr[j + 1] = number_to_insert
   }
-  console.log('SE:', SE)
-  console.log('NYS:', NYS)
+  return arr;
 }
 
 
