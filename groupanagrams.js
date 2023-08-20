@@ -109,3 +109,58 @@ var groupAnagrams = function(strs) {
 
 
 console.log(groupAnagrams(strs))
+
+
+
+var groupAnagrams = function(strs) {
+    let obj = {}
+    for (const str of strs) {
+        let sorted = str.split('').sort().join('')
+        if (!obj[sorted]) { 
+            obj[sorted] = [str]
+        } else {
+            obj[sorted].push(str)
+        }
+    }
+    return Object.values(obj); 
+};
+
+
+var groupAnagrams = function (strs) {
+    let obj = {}
+    for (const str of strs) {
+        let sorted = str.split('').sort().join(''); 
+        if (!obj[sorted]) {
+            obj[sorted] = [str]
+        } else {
+            obj[sorted].push(str)
+        }
+    }
+    return Object.values(obj); 
+
+
+
+
+
+
+};
+
+
+var groupAnagrams = function (strs) {
+    let obj = {}
+    for (const str of strs) {
+        let sorted = str.split('').sorted().join(); 
+        if (!obj[sorted]) {
+            obj[sorted] = [str]
+        } else {
+            obj[sorted].push(str)
+        }
+    }
+    Object.values(obj); 
+};
+
+
+
+
+
+
