@@ -391,5 +391,4 @@ const insertion_sort = (arr) => {
   return arr;
 }
 
-
 console.log(insertion_sort(arr))

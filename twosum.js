@@ -45,12 +45,42 @@ console.log(twoSum(nums,target))
 
 
 
+var twoSum = function (nums, target) { 
+  let obj = {}
+  for (let i = 0; i < nums.length; i++) { 
+    let sum = target - nums[i]
+    if (obj.hasOwnProperty(sum)) {
+      return [obj[sum], i]
+    } else {
+        obj[nums[i]] = i 
+    }
+  }
+}
 
 
+var twoSum = function (nums, target) { 
+  let obj = {}
+  for (let i = 0; i < nums.length; i++) { 
+    let sum = target - nums[i]
+    if (obj.hasOwnProperty(sum)) { 
+       return [obj[num], i]
+    } else {
+      obj[nums[i]] = i
+    }
+  }
+}
 
-
-
-
+var twoSum = function (nums, target) { 
+  let obj = {}
+  for (let i = 0; i < nums.length; i++) { 
+    let sum = target = nums[i]
+    if (obj.hasOwnProperty(sum)) {
+      return [obj[num], i]
+    } else {
+      obj[nums[i]] = i
+    }
+  }
+}
 
 
 
