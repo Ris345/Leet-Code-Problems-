@@ -1,8 +1,7 @@
-
 // let strs = ["eat","tea","tan","ate","nat","bat"]
-// var groupAnagrams = function (strs) { 
-//     debugger; 
-//     //  iterate and find the group of anagrams 
+// var groupAnagrams = function (strs) {
+//     debugger;
+//     //  iterate and find the group of anagrams
 //     //  iterate through each item in an array
 //     //  find the group of anagrams
 //     // push it to a new arr
@@ -21,14 +20,13 @@
 //         }
 //         another_arr.push(strs[strs.length - 1]);
 //     }
-//     return outer_arr; 
+//     return outer_arr;
 // }
 
 // console.log(groupAnagrams(strs))
 
-
 // var groupAnagrams = function(strs) {
-//     debugger; 
+//     debugger;
 //     const obj = {}
 //     for (const str of strs){
 //         const sorted = str.split('').sort().join('');
@@ -36,15 +34,13 @@
 //         if(!obj[sorted]){
 //             obj[sorted] = [str]
 //         } else {
-//             obj[sorted].push(str); 
+//             obj[sorted].push(str);
 //         }
 //     }
-//     return Object.values(obj); 
+//     return Object.values(obj);
 // };
 
-
-
-let strs = ["eat","tea","tan","ate","nat","bat"]
+let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 // var groupAnagrams = function(strs) {
 //     let obj = {}
@@ -59,9 +55,7 @@ let strs = ["eat","tea","tan","ate","nat","bat"]
 // return Object.values(obj)
 // };
 
-
 // console.log(groupAnagrams(strs))
-
 
 // var groupAnagrams = function(strs) {
 //     let obj = {}
@@ -82,7 +76,7 @@ let strs = ["eat","tea","tan","ate","nat","bat"]
 //     for (const str of strs) {
 //         let sorted_str = str.split('').sort().join('')
 //         if (!obj[sorted_str]) {
-//             obj[sorted_str] = [str]   
+//             obj[sorted_str] = [str]
 //         } else {
 //             obj[sorted_str].push(str)
 //         }
@@ -92,75 +86,57 @@ let strs = ["eat","tea","tan","ate","nat","bat"]
 
 // console.log(groupAnagrams(strs))
 
+var groupAnagrams = function (strs) {
+  let obj = {};
+  for (const str of strs) {
+    let sorted_str = str.split("").sort().join();
 
-var groupAnagrams = function(strs) {
-    let obj = {}
-    for (const str of strs) {
-        let sorted_str = str.split('').sort().join()
-
-        if (!obj[sorted_str]) {
-            obj[sorted_str] = [str]
-        } else {
-            obj[sorted_str].push(str)
-        }
+    if (!obj[sorted_str]) {
+      obj[sorted_str] = [str];
+    } else {
+      obj[sorted_str].push(str);
     }
-    return Object.values(obj)
+  }
+  return Object.values(obj);
 };
 
-
-console.log(groupAnagrams(strs))
-
-
-
-var groupAnagrams = function(strs) {
-    let obj = {}
-    for (const str of strs) {
-        let sorted = str.split('').sort().join('')
-        if (!obj[sorted]) { 
-            obj[sorted] = [str]
-        } else {
-            obj[sorted].push(str)
-        }
-    }
-    return Object.values(obj); 
-};
-
+console.log(groupAnagrams(strs));
 
 var groupAnagrams = function (strs) {
-    let obj = {}
-    for (const str of strs) {
-        let sorted = str.split('').sort().join(''); 
-        if (!obj[sorted]) {
-            obj[sorted] = [str]
-        } else {
-            obj[sorted].push(str)
-        }
+  let obj = {};
+  for (const str of strs) {
+    let sorted = str.split("").sort().join("");
+    if (!obj[sorted]) {
+      obj[sorted] = [str];
+    } else {
+      obj[sorted].push(str);
     }
-    return Object.values(obj); 
-
-
-
-
-
-
+  }
+  return Object.values(obj);
 };
-
 
 var groupAnagrams = function (strs) {
-    let obj = {}
-    for (const str of strs) {
-        let sorted = str.split('').sorted().join(); 
-        if (!obj[sorted]) {
-            obj[sorted] = [str]
-        } else {
-            obj[sorted].push(str)
-        }
+  let obj = {};
+  for (const str of strs) {
+    let sorted = str.split("").sort().join("");
+    if (!obj[sorted]) {
+      obj[sorted] = [str];
+    } else {
+      obj[sorted].push(str);
     }
-    Object.values(obj); 
+  }
+  return Object.values(obj);
 };
 
-
-
-
-
-
+var groupAnagrams = function (strs) {
+  let obj = {};
+  for (const str of strs) {
+    let sorted = str.split("").sorted().join();
+    if (!obj[sorted]) {
+      obj[sorted] = [str];
+    } else {
+      obj[sorted].push(str);
+    }
+  }
+  Object.values(obj);
+};
