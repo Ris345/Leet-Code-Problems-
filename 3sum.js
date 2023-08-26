@@ -5,14 +5,13 @@ var threeSum = function (nums) {
     // if  the first triplet !== second triplet then return the group of trilpets that return triplets == 0
     nums.sort((x,y) => x - y)
     let left = 0
+    let inner_arr = []
     let right = nums.length - 1
     while (left < right) {
-        left++
-        right++
+        inner_arr.push(nums[right])
+        
     }
-
-    return nums;     
-
+    return inner_arr; 
 };
 
 
