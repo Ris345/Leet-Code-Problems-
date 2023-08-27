@@ -381,14 +381,17 @@ const insertion_sort = (arr) => {
   debugger; 
   for (let i = 1; i < arr.length; i++){
     let number_to_insert = arr[i]
+    console.log('number_to_insert:', number_to_insert)
     let j = i - 1
+    console.log('j', j)
     while (j >= 0 && arr[j] > number_to_insert) {
       arr[j + 1] = arr[j]
       j = j - 1
+      console.log('j in while loop:', j)
     }
     arr[j + 1] = number_to_insert
   }
-  return arr;
+  return arr; 
 }
 
 console.log(insertion_sort(arr))
