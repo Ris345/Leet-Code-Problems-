@@ -64,7 +64,7 @@ const numbers = [2, 3, 4];
 // };
 
 // console.log(twoSum(numbers, 6))
-let num = [2, 7, 11, 15];
+let num = [5, 25, 75];
 
 var twoSum = function (num, target) {
     debugger; 
@@ -72,7 +72,10 @@ var twoSum = function (num, target) {
   let right = num.length - 1;
   let sum = 0;
   while (left < right) {
-    sum = num[left] + num[right];
+      sum = num[left] + numbers[right];
+      console.log(sum)
+      console.log('left pointer', num[left])
+      console.log('right pointer:', num[right] )
     if (sum === target) {
       return [left + 1, right + 1];
     } else if (right > left) {
@@ -83,7 +86,7 @@ var twoSum = function (num, target) {
   }
 };
 
-console.log(twoSum(num, 9));
+console.log(twoSum(num, 100));
 
 
 
