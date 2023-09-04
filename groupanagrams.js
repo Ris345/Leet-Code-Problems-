@@ -172,6 +172,21 @@ var groupAnagrams = function(strs) {
 
 
 
+var groupAnagrams = function(strs) {
+   let obj = {}
+  for (const s of strs) {
+    let sorted = s.split('').sort().join(); 
+    if (!obj[sorted]) {
+      obj[sorted] = [s]
+    } else {
+      obj[sorted].push(s)
+    }
+  }  
+  return Object.values(obj); 
+};
+
+
+
 
 
 
