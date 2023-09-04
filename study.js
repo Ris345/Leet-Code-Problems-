@@ -415,4 +415,40 @@ const quick_sort = (arr) => {
   return [...quick_sort(left), pivot ,...quick_sort(right)]
 }
 
-console.log(quick_sort(arr))
+// console.log(quick_sort(arr))
+
+
+
+const merge_sort = (arr) => {
+  // push each item of the array into a new array
+  // then I compare left and right
+  // find the smallest number and move it to the right
+  // keep moving it to the right unless and until left is completely empty
+  if (arr.length < 2) {
+    return arr; 
+  }
+  const mid = Math.floor(arr.length / 2)
+  const leftArr = arr.slice(0, mid); 
+  const rightArr = arr.slice(mid)
+  return merge(merge_sort(leftArr), merge_sort(rightArr)); 
+}
+
+
+const merge = (leftArr, rightArr) => {
+  const sorted_arr = []
+  while (leftArr.length && rightArr.length) {
+    if (leftArr[0] <= rightArr[0]) {
+      sorted_arr.push(leftArr.shift())
+    } else {
+      sorted_arr.push(rightArr.shift())
+    }
+  }
+  return [...sorted_arr, ...leftArr, ...rightArr]; 
+}
+
+
+
+
+
+
+console.log(merge_sort([-6,20, -2, 4, 8]))

@@ -76,6 +76,26 @@ var productExceptSelf = function (nums) {
     }
     for (let k = arr.length - 1; k >= 0; k--) { 
         arr[k] *= left 
-        left = nums[k]
+        left *= nums[k]
     }
 }
+
+
+var productExceptSelf = function(nums) {
+    let left = 1 
+    let right = 1
+    let ans = []
+    // iterate left 
+    for (let i = 0; i < nums.length; i++){
+        ans.push(right)
+        right *= nums[i]
+    }
+    // iterate right 
+    for (let k = nums.length - 1; k >= 0; k++){
+        ans[k] *= left
+        left *= nums[k]
+    }
+    return ans; 
+};
+
+
