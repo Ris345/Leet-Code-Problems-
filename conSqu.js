@@ -95,3 +95,20 @@ var longestConsecutive = function(nums) {
 
 
 
+var longestConsecutive = function(nums) {
+    let starters = []
+    let tempCount = 1
+    let longestCount = 1
+    let setOfnums = new Set(nums); 
+
+    for (let key of setOfnums.keys()) {
+        if (!setOfnums.key(key - 1)) {
+            starters.push(key)
+        }
+    }
+
+
+    for (let starter of starters) {
+        
+    }
+};
