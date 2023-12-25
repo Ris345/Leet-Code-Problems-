@@ -50,22 +50,25 @@
 // console.log(multiply_number(8, 24)); 
 
 
-const optimize_multiply_number = (n, t) => {
-    if (t === 0) {
-        return 0
-    }
-    if (t === 1) {
-        return n; 
-    } else {
-        let product = n
-        for (let i = 1; i < t; i++){
-           product += n 
-    }
-    return product; 
-    }
+// const optimize_multiply_number = (n, t) => {
+//     if (t === 0) {
+//         return 0
+//     }
+//     if (t === 1) {
+//         return n; 
+//     } else {
+//         let product = n
+//         for (let i = 1; i < t; i++){
+//            product += n 
+//     }
+//     return product; 
+//     }
 
-}
-console.log(optimize_multiply_number(8,4))
+// }
+
+
+
+// console.log(optimize_multiply_number(8,4,5,5))
 
 
 // const multiply_number = (num, times) => {
@@ -114,4 +117,61 @@ console.log(optimize_multiply_number(8,4))
 
 
 
+// now as a challenge tying multiplying more than 2 numbers 
+// const multiplication = (nums, time) => {
+// if (time)
 
+// }
+
+// const mulltiply without the multiplication sign 
+
+// const multiplication = (n, t) => {
+//     if (t <= 0) {
+//     return 0 
+//     }
+//     if (t === 1) {
+//         return num 
+//     }
+//     let product = n; 
+//     for (let i = 1; i < t; i++){
+//         product += n 
+//     }
+//     return product; 
+
+// }
+
+
+// console.log(multiplication(8, 2))
+
+
+//  the parameters need to be flexible -- instead of static the user should be able to add as many paremetrs as poossible 
+
+
+
+const multiply = (n, time) => {
+    if(time <= 0) {
+        return 0;
+    }
+
+let product = n; 
+
+for (let i = 1; i < time; i++){
+    product += n 
+}
+return product; 
+}
+
+// console.log(multiply(8, 4))
+
+
+// make the times declarative 
+const multiply_unlimited_times = (num, times) => {
+    // I can multiply as many times as possible 
+    let times = []; 
+    
+    
+
+}
+
+
+console.log(multiply_unlimited_times(2, 8, 5)); 
