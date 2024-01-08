@@ -1,4 +1,4 @@
-// //  write a function that multiply's number without the multiplication sign.  
+// //  write a function that multiply's number without the multiplication sign.
 
 // let arr = new Array()
 // const multiply_number = (num, times) => {
@@ -6,73 +6,65 @@
 //         return num
 //     } else if (times > 1) {
 //         for (let i = 0; i < times; i++){
-//             // or create an array on the length of the times and  find the sum of an array 
+//             // or create an array on the length of the times and  find the sum of an array
 //             if (times !== i) {
 //                 arr.push(num)
-//             } 
+//             }
 //         }
 //     }
 //     var total = arr.reduce((x, y) => {
 //         return x + y
 //       },0);
-      
-//     return total; 
+
+//     return total;
 // }
 
-// console.log(multiply_number(8, 24)); 
+// console.log(multiply_number(8, 24));
 
+// 8 X 2 = 16 ---> 8 + 8 = 16 or 8 X 3 = 24 ---> 24 8 + 8 + 8 = 24
 
-// 8 X 2 = 16 ---> 8 + 8 = 16 or 8 X 3 = 24 ---> 24 8 + 8 + 8 = 24 
-
-
-
-//  optimize 
+//  optimize
 // let arr = new Array()
 // const multiply_number = (num, times) => {
 //     if (times === 1) {
 //         return num
 //     } else if (times > 1) {
 //         for (let i = 0; i < times; i++){
-//             // or create an array on the length of the times and  find the sum of an array 
+//             // or create an array on the length of the times and  find the sum of an array
 //             if (times !== i) {
 //                 arr.push(num)
-//             } 
+//             }
 //         }
 //     }
 //     var total = arr.reduce((x, y) => {
 //         return x + y
 //       },0);
-      
-//     return total; 
+
+//     return total;
 // }
 
-
-// console.log(multiply_number(8, 24)); 
-
+// console.log(multiply_number(8, 24));
 
 // const optimize_multiply_number = (n, t) => {
 //     if (t === 0) {
 //         return 0
 //     }
 //     if (t === 1) {
-//         return n; 
+//         return n;
 //     } else {
 //         let product = n
 //         for (let i = 1; i < t; i++){
-//            product += n 
+//            product += n
 //     }
-//     return product; 
+//     return product;
 //     }
 
 // }
 
-
-
 // console.log(optimize_multiply_number(8,4,5,5))
 
-
 // const multiply_number = (num, times) => {
-//     debugger; 
+//     debugger;
 //     if (times <= 0) {
 //         return 0; // If times is 0 or negative, the result should be 0
 //     } else {
@@ -92,16 +84,16 @@
 
 // let obj = {}
 // const unique_char = (str) => {
-//     debugger; 
-//     // push it in the obj somehow 
+//     debugger;
+//     // push it in the obj somehow
 //     for (let i = 0; i < str.length; i++){
 //         if (obj[str[i]]) {
 //             obj[str[i]] += 1
 //         } else {
 //             obj[str[i]] = 1
-//         }    
-//     }    
-//     //  now loop through the object to find the frequnecy of the obj 
+//         }
+//     }
+//     //  now loop through the object to find the frequnecy of the obj
 //     let frequnecy = Object.values(obj)
 //     for (let i = 0; i < frequnecy.length; i++) {
 //         if (frequnecy[i] > 1) {
@@ -111,67 +103,74 @@
 //     return true;
 // }
 
+// console.log(unique_char('catchy'));
 
-// console.log(unique_char('catchy')); 
-
-
-
-
-// now as a challenge tying multiplying more than 2 numbers 
+// now as a challenge tying multiplying more than 2 numbers
 // const multiplication = (nums, time) => {
 // if (time)
 
 // }
 
-// const mulltiply without the multiplication sign 
+// const mulltiply without the multiplication sign
 
 // const multiplication = (n, t) => {
 //     if (t <= 0) {
-//     return 0 
+//     return 0
 //     }
 //     if (t === 1) {
-//         return num 
+//         return num
 //     }
-//     let product = n; 
+//     let product = n;
 //     for (let i = 1; i < t; i++){
-//         product += n 
+//         product += n
 //     }
-//     return product; 
+//     return product;
 
 // }
 
-
 // console.log(multiplication(8, 2))
 
-
-//  the parameters need to be flexible -- instead of static the user should be able to add as many paremetrs as poossible 
-
-
+//  the parameters need to be flexible -- instead of static the user should be able to add as many paremetrs as poossible
 
 const multiply = (n, time) => {
-    if(time <= 0) {
-        return 0;
-    }
+  if (time <= 0) {
+    return 0;
+  }
 
-let product = n; 
+  let product = n;
 
-for (let i = 1; i < time; i++){
-    product += n 
-}
-return product; 
-}
+  for (let i = 1; i < time; i++) {
+    product += n;
+  }
+  return product;
+};
 
 // console.log(multiply(8, 4))
 
-
-// make the times declarative 
+// make the times declarative
 const multiply_unlimited_times = (num, times) => {
-    // I can multiply as many times as possible 
-    let times = []; 
-    
-    
+  debugger;
+  // I can multiply as many times as possible
+  // edge case
+  if (num <= 0) {
+    return num;
+  }
+  let product = num;
+  // unpack the values from the array
+  for (let i = 0; i < times; i++) {
+    product += num;
+  }
+  return product;
+  // goal is to multiply the num as many times as possible
+  // so adding the times would not solve the problem
+  // because 2 X 8 X 1 is not the same as 2 X 9
+  // so that would not work
+  // in the case of 2 X 8 X 1 ---> 16 X 1 = 16
+};
 
-}
+console.log(multiply_unlimited_times(2, [8, 2]));
+
+// pretty close will work on it later
 
 
-console.log(multiply_unlimited_times(2, 8, 5)); 
+

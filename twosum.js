@@ -85,7 +85,6 @@ var twoSum = function (nums, target) {
 
 
 // two sum two pointer method 
-
 const two_sum = (nums, target) => {
   let left = 0
   let right = nums.length - 1
