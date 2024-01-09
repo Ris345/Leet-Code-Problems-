@@ -1,5 +1,9 @@
 // Input: haystack = "sadbutsad", needle = "sad"
 
+
+// passed first two test cases 
+
+
 let test = []
 var strStr = function (haystack, needle) {
   debugger;
@@ -23,4 +27,4 @@ var strStr = function (haystack, needle) {
     return change_needle.length === test.length ? test[0] : -1; 
 };
 
-console.log(strStr("leetcode", "leeto"));
+console.log(strStr("leetcode", "leeto"))
