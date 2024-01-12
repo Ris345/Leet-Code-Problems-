@@ -147,6 +147,9 @@ const multiply = (n, time) => {
 
 // console.log(multiply(8, 4))
 
+
+//  
+ 
 // make the times declarative
 const multiply_unlimited_times = (num, times) => {
   debugger;
@@ -157,7 +160,7 @@ const multiply_unlimited_times = (num, times) => {
   }
   let product = num;
   // unpack the values from the array
-  for (let i = 0; i < times; i++) {
+  for (let i = 1; i < times; i++) {
     product += num;
   }
   return product;
@@ -168,9 +171,100 @@ const multiply_unlimited_times = (num, times) => {
   // in the case of 2 X 8 X 1 ---> 16 X 1 = 16
 };
 
-console.log(multiply_unlimited_times(2, [8, 2]));
+// console.log(multiply_unlimited_times(2, [8, 2]));
 
 // pretty close will work on it later
 
 
+// 2 X * X 1 = 16 
+// two loops 
+// one inner 
+// oner outer 
+// arr.reduce()
+// map 
+// find 
+// reverse 
+// splice
 
+
+// const multiply_without_multiply = (n, t) => {
+//   debugger; 
+//    // we need  to use the arr.reduce method to solve this problem 
+//    // in this case t is an array
+//    // output rg 16 -----> 8 X 2 = 16 challenege we are solving this problem without using a multiplicatio sign
+//    // 
+//   let product = n
+//   let times_a_number_is_added = 0
+//   // brute force approach 
+//   // if the length of the arr > 1 run  the loop other wise just add the number 
+//   if (t.length > 1) {
+//     // run the loop thats nested
+//     for (let i = 0; i < t.length; i++){
+//       times_a_number_is_added += t[i]
+//       console.log(times_a_number_is_added)
+//       if (times_a_number_is_added <= 0) {
+//         return 0 
+//       } else if (times_a_number_is_added >= 1 ) {
+//         for (let k = 1; k < times_a_number_is_added; k++){
+//            product += n
+//         }
+//       } else 
+//      // calculate the product here 
+//         return 1 
+//     }
+    
+//   } else {
+//     // run the other loop 
+//     for (let i = 0; i < t.length; i++){
+//         product += n
+//     }    
+//   }
+//   return product; 
+// }
+
+// console.log(multiply_without_multiply(2, [4, 4]))
+
+
+
+
+/// step one 2 
+// step two X 
+// step 3 the code counts the number of times the number should be added
+
+
+// 2 X 4 X 4 = 16 X 2 = 32 
+
+// each number if it is not the end becomes a n the number after the n is always a times 
+
+
+const multiply_without_multiply = (n, t) => {
+  debugger; 
+  // if there are multiple numbers to multiply 
+  let product = n; 
+  if (t.length > 1) {
+    // check the array first if there are numbers with 0 or 1 
+    // for (let i = 0; i < t.length; i++){
+    //  // iterate over each item to see if there are zeros or 1 
+    //   if (t[i] <= 0) {
+    //     return 0
+    //   } else if (t[i] === 1) {
+    //     return 1 
+    //   }
+    // }
+    let total_timess =  t.reduce((x, y) => {
+      if (y <= 0) {
+        return 0
+      } else if (y === 1) {
+        return 1 
+      } else {
+        return x + y
+      }
+    }) 
+    for (let i = 1; i < total_timess; i++){
+      product += n 
+    }
+   }
+  return product; 
+}
+
+console.log(multiply_without_multiply(2, [4,4]))
